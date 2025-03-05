@@ -6,7 +6,8 @@ export COMMIT_TITLE="chore: Components automatic update."
 export COMMIT_BODY="Sync components with $PROFILE repo"
 git config --global user.email "$EMAIL"
 git config --global user.name "$NAME"
-echo "$REPO_COMPONENT_DEFINITION"
+echo "cd'ing into $REPO_COMPONENT_DEFINITION"
+pwd
 cd "$REPO_COMPONENT_DEFINITION"
 git checkout -b "components_autoupdate_$GITHUB_RUN_ID"
 ls
