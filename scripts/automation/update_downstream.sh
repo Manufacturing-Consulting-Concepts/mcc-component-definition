@@ -9,7 +9,7 @@ git config --global user.name "$NAME"
 cd "$REPO_COMPONENT_DEFINITION"
 git checkout -b "components_autoupdate_$GITHUB_RUN_ID"
 pwd
-cp -r ../component-definitions .
+cp -r ./component-definitions .
 if [ -z "$(git status --porcelain)" ]; then 
   echo "Nothing to commit"
 else
